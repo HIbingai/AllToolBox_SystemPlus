@@ -164,6 +164,10 @@ public final class SystemPlusEntry implements IXposedHookLoadPackage, IXposedHoo
             XposedBridge.log(TAG + "skip install pipeline hooks by default");
         }
 
+        // Keep a narrow crash guard even when install pipeline bypass is disabled.
+        // Some ROM hook chains throw intermittent NPE in installLocationPolicy.
+        installPackageInstallStabilityGuards(cl);
+
         boolean disableVersionDowngradeCheck = HookSettings.isEnabled(
             prefs,
             "DisableVersionDowngradeCheck",
@@ -285,19 +289,50 @@ public final class SystemPlusEntry implements IXposedHookLoadPackage, IXposedHoo
                 "com.android.packageinstaller.DeviceUtils",
                 "isWear",
                 false);
+    }
 
+    private void installPackageInstallStabilityGuards(ClassLoader cl) {
         hookAllMethodsIfExists(cl,
-            "android.content.pm.IPackageManager$Stub$Proxy",
-            "getApplicationInfo",
+            "com.android.server.pm.PackageManagerService$InstallParams",
+            "installLocationPolicy",
             new XC_MethodHook() {
                 @Override
                 protected void afterHookedMethod(MethodHookParam param) {
-                if (param.hasThrowable()) {
-                    XposedBridge.log(TAG + "suppress getApplicationInfo throwable: "
-                        + param.getThrowable().getClass().getSimpleName());
+                    if (!param.hasThrowable()) {
+                        return;
+                    }
+                    Throwable throwable = param.getThrowable();
+                    if (!(throwable instanceof NullPointerException)) {
+                        return;
+                    }
+
+                    Class<?> returnType = ((Method) param.method).getReturnType();
+                    if (Integer.TYPE.equals(returnType) || Integer.class.equals(returnType)) {
+                        // 1 maps to internal install recommendation on legacy ROM branches.
+                        param.setThrowable(null);
+                        param.setResult(1);
+                        XposedBridge.log(TAG + "guarded installLocationPolicy NPE with fallback result=1");
+                    }
+                }
+            });
+
+        hookAllMethodsIfExists(cl,
+            "com.android.server.pm.PackageManagerService$InstallParams",
+            "handleStartCopy",
+            new XC_MethodHook() {
+                @Override
+                protected void afterHookedMethod(MethodHookParam param) {
+                    if (!param.hasThrowable()) {
+                        return;
+                    }
+                    Throwable throwable = param.getThrowable();
+                    if (!(throwable instanceof NullPointerException)) {
+                        return;
+                    }
+
                     param.setThrowable(null);
                     param.setResult(null);
-                }
+                    XposedBridge.log(TAG + "guarded handleStartCopy NPE by swallowing throwable");
                 }
             });
     }
