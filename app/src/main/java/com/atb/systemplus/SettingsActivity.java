@@ -2,6 +2,7 @@ package com.atb.systemplus;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.preference.Preference;
@@ -14,6 +15,16 @@ public final class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         DpiCompat.apply(this);
         setContentView(R.layout.activity_settings);
+
+        View noticeCard = findViewById(R.id.card_notice);
+        if (noticeCard != null) {
+            noticeCard.setOnClickListener(v -> startActivity(new Intent(this, NoticeActivity.class)));
+        }
+
+        View updateCard = findViewById(R.id.card_update);
+        if (updateCard != null) {
+            updateCard.setOnClickListener(v -> startActivity(new Intent(this, UpdateActivity.class)));
+        }
 
         if (savedInstanceState == null) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

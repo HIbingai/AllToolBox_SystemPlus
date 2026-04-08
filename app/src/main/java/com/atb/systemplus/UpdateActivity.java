@@ -5,19 +5,17 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.progressindicator.CircularProgressIndicator;
-import com.google.android.material.progressindicator.LinearProgressIndicator;
 
 public final class UpdateActivity extends AppCompatActivity {
 
     private final Handler handler = new Handler(Looper.getMainLooper());
-    private MaterialCardView confirmCard;
-    private CircularProgressIndicator requestingIndicator;
-    private LinearProgressIndicator progressBar;
+    private View confirmCard;
+    private ProgressBar requestingIndicator;
+    private ProgressBar progressBar;
     private TextView downloadProgress;
 
     @Override
@@ -27,23 +25,23 @@ public final class UpdateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_update);
 
         TextView versionView = findViewById(R.id.version_view);
-        MaterialButton checkButton = findViewById(R.id.check_update_button);
+        Button checkButton = findViewById(R.id.check_update_button);
         requestingIndicator = findViewById(R.id.requesting_indicator);
         confirmCard = findViewById(R.id.confirm_card);
-        MaterialButton updateButton = findViewById(R.id.update_button);
-        MaterialButton cancelButton = findViewById(R.id.cancel_button);
+        Button updateButton = findViewById(R.id.update_button);
+        Button cancelButton = findViewById(R.id.cancel_button);
         progressBar = findViewById(R.id.progress_bar);
         downloadProgress = findViewById(R.id.download_progress);
 
         versionView.setText(getString(R.string.current_version, getVersionName(), getVersionCode()));
+        progressBar.setMax(100);
         progressBar.setProgress(0);
         downloadProgress.setText(getString(R.string.progress_not_download));
 
         checkButton.setOnClickListener(v -> checkForUpdate());
         updateButton.setOnClickListener(v -> startFakeDownload());
         cancelButton.setOnClickListener(v -> {
-            confirmCard.setVisibility(View.INVISIBLE);
-            confirmCard.setAlpha(0f);
+            confirmCard.setVisibility(View.GONE);
         });
     }
 
@@ -52,7 +50,6 @@ public final class UpdateActivity extends AppCompatActivity {
         handler.postDelayed(() -> {
             requestingIndicator.setVisibility(View.GONE);
             confirmCard.setVisibility(View.VISIBLE);
-            confirmCard.animate().alpha(1f).setDuration(220).start();
         }, 800);
     }
 

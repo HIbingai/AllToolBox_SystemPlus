@@ -3,6 +3,16 @@
     <string name="app_name">系统增强</string>
     <string name="settings">设置</string>
     <string name="xposed_description">SystemPlus 重写版 Hook 模块</string>
+    <string name="home_title">SystemPlus</string>
+    <string name="home_subtitle">SystemPlus 模块中心</string>
+    <string name="home_notice_title">查看公告</string>
+    <string name="home_notice_summary">支持查看此模块公告和 SkyWear 公告</string>
+    <string name="home_update_title">检查更新</string>
+    <string name="home_update_summary">瞅一眼模块有无更新</string>
+    <string name="notice_page_title">公告</string>
+    <string name="notice_compat_content">- 当前公告页已切换为稳定兼容模式。
+- 如需完整公告流，可后续接入稳定数据源。</string>
+    <string name="notice_compat_footer">兼容模式页面</string>
 
     <string name="ui_title">SystemPlus 启用状态详情</string>
     <string name="ui_subtitle">原版 huanli 风格状态页：框架与模块启用/禁用检测</string>

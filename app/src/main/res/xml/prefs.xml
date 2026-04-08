@@ -150,15 +150,6 @@
             android:title="模块自激活"
             android:summary="调用模块激活流程（需 root）" />
 
-        <com.atb.systemplus.prefs.GoToActivityPreference
-            android:key="Notice"
-            android:title="公告"
-            android:summary="查看版本公告与说明" />
-
-        <com.atb.systemplus.prefs.GoToActivityPreference
-            android:key="Update"
-            android:title="更新"
-            android:summary="检查并模拟更新流程" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="状态详情">
