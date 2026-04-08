@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_unlock_screen"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ui_title"
+            android:textColor="@color/cyber_text_primary"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:text="@string/ui_subtitle"
+            android:textColor="@color/cyber_text_secondary"
+            android:textSize="@dimen/subtitle_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/panel_gap"
+            android:background="@drawable/bg_panel_cyber"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/status_framework_label"
+                android:textColor="@color/cyber_text_secondary"
+                android:textSize="@dimen/section_label_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_framework_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:text="@string/status_unknown"
+                android:textColor="@color/cyber_text_primary"
+                android:textSize="@dimen/status_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:text="@string/status_module_label"
+                android:textColor="@color/cyber_text_secondary"
+                android:textSize="@dimen/section_label_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_module_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:text="@string/status_unknown"
+                android:textColor="@color/cyber_text_primary"
+                android:textSize="@dimen/status_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:text="@string/status_runtime_hint_label"
+                android:textColor="@color/cyber_text_secondary"
+                android:textSize="@dimen/section_label_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_runtime_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:text="@string/status_unknown"
+                android:textColor="@color/cyber_text_primary"
+                android:textSize="@dimen/hint_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:text="@string/status_framework_detail_label"
+                android:textColor="@color/cyber_text_secondary"
+                android:textSize="@dimen/section_label_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_framework_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:text="@string/status_unknown"
+                android:textColor="@color/cyber_text_primary"
+                android:textSize="@dimen/hint_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:text="@string/status_module_detail_label"
+                android:textColor="@color/cyber_text_secondary"
+                android:textSize="@dimen/section_label_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_module_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:text="@string/status_unknown"
+                android:textColor="@color/cyber_text_primary"
+                android:textSize="@dimen/hint_text_size" />
+
+            <com.atb.systemplus.ui.CyberButton
+                android:id="@+id/btn_refresh_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_lg"
+                android:text="@string/action_refresh_status" />
+
+            <com.atb.systemplus.ui.CyberButton
+                android:id="@+id/btn_copy_diagnostics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:text="@string/action_copy_diagnostics" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

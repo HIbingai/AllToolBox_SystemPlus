@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/settings">
+        <SwitchPreferenceCompat
+            android:key="ClipBoard"
+            android:title="修复剪贴板服务"
+            android:summary="修复内容不包含长按选择文字"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="SetOrientation"
+            android:title="修复手动旋转屏幕，在7.1机型上不生效"
+            android:summary="比如腕上视频的旋转屏幕按钮"
+            android:defaultValue="false" />
+
+        <com.atb.systemplus.prefs.NeedUnlockSwitchPreference
+            android:key="SelectText"
+            android:title="修复长按选择文字"
+            android:summary="部分无法选中为应用设定而非小天才限制，不做修改"
+            android:defaultValue="false" />
+
+        <com.atb.systemplus.prefs.NeedUnlockSwitchPreference
+            android:key="NoShowInput_InSelect"
+            android:title="在已选中文字时不弹出输入法"
+            android:summary="BETA，不确定是否有未知问题"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="Installer"
+            android:title="原生包管理器去除检测"
+            android:summary="去除Wear不支持安装/卸载和检测发起请求应用是否为系统签名应用"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="VideoRecord"
+            android:title="去除小视频录制30秒"
+            android:summary="直接从支支的视频拿的类名&amp;方法名"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="SDK"
+            android:title="禁用SDK限制"
+            android:summary="这会使SystemService解析出的应用targetSdkVersion都为23"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="SettingsCommand"
+            android:title="替换接管SettingsShell命令"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="DePermissions"
+            android:title="启用De权限"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="NoMigrateReset"
+            android:title="禁止解绑清除数据"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="AutoRotation"
+            android:title="自动旋转支持"
+            android:summary="8.1机型已测试，7.1已适配未测试"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="MultiTouch"
+            android:title="多点触控支持"
+            android:summary="会导致双指截屏无法使用"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="DisableSwipe"
+            android:title="禁用右滑退出"
+            android:summary="请在下方点击选择应用"
+            android:defaultValue="false" />
+
+        <com.atb.systemplus.prefs.AppListPreference
+            android:key="disableSwipeApps"
+            android:title="禁用右滑退出应用列表"
+            android:summary="点击以打开应用选择器" />
+
+        <SwitchPreferenceCompat
+            android:key="DontKillApp"
+            android:title="应用防杀"
+            android:summary="防止长时间休眠被小天才杀掉的应用，请在下方点击选择列表"
+            android:defaultValue="false" />
+
+        <com.atb.systemplus.prefs.AppListPreference
+            android:key="DontKillApps"
+            android:title="防杀应用列表"
+            android:summary="点击以打开应用选择器" />
+
+        <SwitchPreferenceCompat
+            android:key="SwitchThumb"
+            android:title="Switch显示修复"
+            android:summary="强制显示Thumb"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="AOD"
+            android:title="息屏显示"
+            android:summary="需配套文件才能使用"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="MotionKey"
+            android:title="去除Input判断是否启动过桌面"
+            android:summary="去除小天才在桌面启动后才可触屏/按键（motion/key）"
+            android:defaultValue="false" />
+
+        <com.atb.systemplus.prefs.NeedUnlockSwitchPreference
+            android:key="SystemUI"
+            android:title="SystemUI、DocumentsUI和原生设置适配"
+            android:summary="仅适配指定修改版本，且需自行安装"
+            android:defaultValue="false" />
+
+        <com.atb.systemplus.prefs.NeedUnlockSwitchPreference
+            android:key="PowerKey_LongClick_Recents"
+            android:title="长按开机键弹出最近任务（需小天才桌面）"
+            android:summary="需要SystemUI支持"
+            android:dependency="SystemUI"
+            android:defaultValue="false" />
+
+        <com.atb.systemplus.prefs.NeedUnlockSwitchPreference
+            android:key="NoNavBar"
+            android:title="禁用导航栏"
+            android:summary="需要SystemUI支持，不然没有导航栏怎么禁用"
+            android:dependency="SystemUI"
+            android:defaultValue="false" />
+
+        <com.atb.systemplus.prefs.NeedUnlockSwitchPreference
+            android:key="SwipeNavBar"
+            android:title="默认隐藏导航栏上滑唤出"
+            android:summary="需要已禁用导航栏"
+            android:dependency="NoNavBar"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="其他">
+        <com.atb.systemplus.prefs.GoToActivityPreference
+            android:key="ActiveSelf"
+            android:title="自激活"
+            android:summary="用于有应用列表限制的机型，详情请点击查看" />
+
+        <com.atb.systemplus.prefs.GoToActivityPreference
+            android:key="ActiveModule"
+            android:title="模块自激活"
+            android:summary="调用模块激活流程（需 root）" />
+
+        <com.atb.systemplus.prefs.GoToActivityPreference
+            android:key="Notice"
+            android:title="公告"
+            android:summary="查看版本公告与说明" />
+
+        <com.atb.systemplus.prefs.GoToActivityPreference
+            android:key="Update"
+            android:title="更新"
+            android:summary="检查并模拟更新流程" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="状态详情">
+        <com.atb.systemplus.prefs.GoToActivityPreference
+            android:key="Unlock"
+            android:title="框架/模块启用状态"
+            android:summary="查看框架与模块启用/禁用详情以及诊断信息" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

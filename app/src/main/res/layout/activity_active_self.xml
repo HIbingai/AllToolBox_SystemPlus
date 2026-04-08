@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="自激活功能用于在应用列表受限机型中激活模块。\n请注意：当前仅支持 EDXP 管理器。" />
+
+        <Button
+            android:id="@+id/active_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="激活 SystemPlus" />
+
+        <TextView
+            android:id="@+id/tip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/active_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="可在此激活核心破解（com.coderstory.toolkit）。\n请先安装对应应用。" />
+
+        <Button
+            android:id="@+id/active_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tip2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="激活核心破解" />
+
+        <TextView
+            android:id="@+id/tip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/active_button2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="可在此激活另一版核心破解（me.weishu.corepatch）。\n请先安装对应应用。" />
+
+        <Button
+            android:id="@+id/active_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tip3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="激活核心破解2" />
+
+    </RelativeLayout>
+</ScrollView>

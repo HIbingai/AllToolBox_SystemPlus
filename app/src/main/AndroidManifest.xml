@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="false"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.SystemPlus"
+        android:supportsRtl="false">
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UnlockActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AppListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActiveSelfActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActiveModuleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NoticeInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QrCodeScannerActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:theme="@style/zxing_CaptureTheme"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="@string/xposed_description" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="54" />
+    </application>
+
+</manifest>

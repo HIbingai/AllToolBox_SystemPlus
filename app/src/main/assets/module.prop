@@ -1,0 +1,6 @@
+id=com.atb.systemplus
+name=SystemPlus NEWwrite
+version=1.0.0
+versionCode=1
+author=atb-rewrite
+description=Clean-room rewrite of SystemPlus Xposed hook entry.

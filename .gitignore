@@ -1,0 +1,14 @@
+# Gradle
+.gradle
+/build
+*/build
+/local.properties
+/.idea
+*.iml
+*.apk
+*.keystore
+*.jks
+*.log
+卡BL/
+
+gradle/wrapper/*.zip

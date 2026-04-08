@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default = compact profile, suitable for 320DPI + 480x540 (240x270dp). -->
+    <dimen name="screen_padding">10dp</dimen>
+    <dimen name="panel_gap">8dp</dimen>
+    <dimen name="panel_inner_padding">10dp</dimen>
+    <dimen name="panel_corner_radius">10dp</dimen>
+
+    <dimen name="input_corner_radius">8dp</dimen>
+    <dimen name="input_padding_h">8dp</dimen>
+    <dimen name="input_padding_v">6dp</dimen>
+
+    <dimen name="title_text_size">18sp</dimen>
+    <dimen name="subtitle_text_size">11sp</dimen>
+    <dimen name="section_label_text_size">12sp</dimen>
+    <dimen name="status_text_size">13sp</dimen>
+    <dimen name="hint_text_size">12sp</dimen>
+    <dimen name="summary_text_size">11sp</dimen>
+    <dimen name="switch_text_size">12sp</dimen>
+    <dimen name="edit_text_size">12sp</dimen>
+
+    <dimen name="space_xs">2dp</dimen>
+    <dimen name="space_sm">4dp</dimen>
+    <dimen name="space_md">6dp</dimen>
+    <dimen name="space_lg">8dp</dimen>
+    <dimen name="space_xl">10dp</dimen>
+    <dimen name="space_xxl">12dp</dimen>
+
+    <dimen name="cyber_button_text_size">11sp</dimen>
+    <dimen name="cyber_button_min_height">34dp</dimen>
+    <dimen name="cyber_button_padding_h">10dp</dimen>
+    <dimen name="cyber_button_padding_v">7dp</dimen>
+    <dimen name="cyber_button_shadow_radius">1.6dp</dimen>
+    <dimen name="cyber_button_corner_radius">10dp</dimen>
+</resources>

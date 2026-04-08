@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">系统增强</string>
+    <string name="settings">设置</string>
+    <string name="xposed_description">SystemPlus 重写版 Hook 模块</string>
+
+    <string name="ui_title">SystemPlus 启用状态详情</string>
+    <string name="ui_subtitle">原版 huanli 风格状态页：框架与模块启用/禁用检测</string>
+    <string name="status_framework_label">框架状态</string>
+    <string name="status_module_label">模块状态</string>
+    <string name="status_framework_detail_label">框架状态详情</string>
+    <string name="status_module_detail_label">模块状态详情</string>
+    <string name="status_runtime_hint_label">运行提示</string>
+    <string name="status_unknown">未知</string>
+    <string name="status_enabled">已启用</string>
+    <string name="status_disabled">未启用</string>
+    <string name="status_enabled_api">已启用（API %1$d）</string>
+    <string name="status_framework_detail_enabled_api">检测到 XposedBridge，API 版本：%1$d。</string>
+    <string name="status_framework_detail_enabled_generic">检测到 XposedBridge 类，但无法读取 API 版本。</string>
+    <string name="status_framework_detail_disabled">当前进程未检测到框架类。请确认 EdXposed/LSPosed 已生效并重启系统。</string>
+    <string name="status_module_detail_enabled">模块 Hook 已注入到当前应用进程。</string>
+    <string name="status_module_detail_disabled">未检测到模块 Hook。请检查模块启用状态、作用域并重启。</string>
+    <string name="runtime_hint_framework_off">当前进程未检测到框架。请检查框架安装状态并重启系统。</string>
+    <string name="runtime_hint_module_off">已检测到框架，但模块 Hook 对本应用未生效。请检查作用域并重启。</string>
+    <string name="runtime_hint_all_ok">框架与模块 Hook 均已生效。</string>
+
+    <string name="action_refresh_status">刷新检测</string>
+    <string name="action_save">应用配置</string>
+    <string name="action_reset_defaults">恢复默认</string>
+    <string name="action_copy_diagnostics">复制诊断信息</string>
+    <string name="save_success">配置已保存。</string>
+    <string name="reset_done">界面已恢复默认，点击“应用配置”后生效。</string>
+    <string name="diagnostics_copied">诊断信息已复制到剪贴板。</string>
+
+    <string name="feature_group_title">功能配置</string>
+    <string name="feature_system_ui">SystemUI 权限 Hook</string>
+    <string name="feature_de_permission">权限绕过（DePermission）</string>
+    <string name="feature_launcher_recents">电源键长按最近任务</string>
+    <string name="feature_video_record">相机录像 Hook</string>
+    <string name="feature_installer">安装器校验绕过</string>
+    <string name="feature_clipboard">剪贴板增强</string>
+    <string name="feature_select_text">文本选择增强</string>
+    <string name="feature_no_input_select">选择文本时隐藏输入法</string>
+    <string name="feature_no_input_long_click">长按时隐藏输入法</string>
+    <string name="feature_privilege_token">特权令牌</string>
+    <string name="feature_privilege_token_hint">输入用于特权模式的 token</string>
+    <string name="feature_video_duration">录像时长（秒，30-7200）</string>
+    <string name="feature_video_duration_hint">默认 600</string>
+
+    <string name="config_summary_placeholder">等待配置摘要...</string>
+    <string name="config_summary">已开启开关：%1$d/%2$d\nToken：%3$s\n录像时长：%4$d 秒</string>
+    <string name="token_empty">空</string>
+    <string name="token_valid">有效</string>
+    <string name="token_invalid">无效</string>
+
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="check_update">检查更新</string>
+    <string name="found_new_version">发现新版本，是否更新？</string>
+    <string name="update">更新</string>
+    <string name="cancel">取消</string>
+    <string name="current_version">当前版本：%1$s(%2$s)</string>
+    <string name="downloaded_progress">已下载进度：%1$s</string>
+    <string name="progress_not_download">已下载进度：还未下载</string>
+</resources>

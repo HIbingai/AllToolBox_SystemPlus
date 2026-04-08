@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cyber_bg_start">#070B14</color>
+    <color name="cyber_bg_end">#101C3A</color>
+    <color name="cyber_panel">#1A274A</color>
+    <color name="cyber_panel_stroke">#3D78FF</color>
+    <color name="cyber_text_primary">#D8F7FF</color>
+    <color name="cyber_text_secondary">#98C5FF</color>
+    <color name="cyber_accent">#2BD4FF</color>
+    <color name="cyber_accent_strong">#18A8F0</color>
+    <color name="cyber_input_bg">#0E1731</color>
+    <color name="cyber_input_stroke">#2A5BD6</color>
+</resources>
