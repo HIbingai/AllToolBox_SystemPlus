@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <com.atb.systemplus.prefs.GoToActivityPreference
+        android:key="Notice"
+        android:title="查看公告"
+        android:summary="支持查看此模块公告和SkyWear公告" />
+
+    <com.atb.systemplus.prefs.GoToActivityPreference
+        android:key="Update"
+        android:title="检查更新"
+        android:summary="瞅一眼模块有无更新" />
+
+    <com.atb.systemplus.prefs.GoToActivityPreference
+        android:key="Unlock"
+        android:title="模块状态"
+        android:summary="查看模块激活状态和模块加载状态。" />
+
     <PreferenceCategory android:title="@string/settings">
         <SwitchPreferenceCompat
             android:key="ClipBoard"
@@ -142,30 +157,9 @@
     <PreferenceCategory android:title="其他">
         <com.atb.systemplus.prefs.GoToActivityPreference
             android:key="ActiveSelf"
+            android:icon="@drawable/ic_active_self"
             android:title="自激活"
             android:summary="用于有应用列表限制的机型，详情请点击查看" />
-
-        <com.atb.systemplus.prefs.GoToActivityPreference
-            android:key="ActiveModule"
-            android:title="模块自激活"
-            android:summary="调用模块激活流程（需 root）" />
-
-        <com.atb.systemplus.prefs.GoToActivityPreference
-            android:key="Notice"
-            android:title="公告"
-            android:summary="查看版本公告与说明" />
-
-        <com.atb.systemplus.prefs.GoToActivityPreference
-            android:key="Update"
-            android:title="更新"
-            android:summary="检查并模拟更新流程" />
-    </PreferenceCategory>
-
-    <PreferenceCategory android:title="状态详情">
-        <com.atb.systemplus.prefs.GoToActivityPreference
-            android:key="Unlock"
-            android:title="框架/模块启用状态"
-            android:summary="查看框架与模块启用/禁用详情以及诊断信息" />
     </PreferenceCategory>
 
 </PreferenceScreen>

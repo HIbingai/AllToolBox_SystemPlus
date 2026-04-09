@@ -1,11 +1,14 @@
 package com.atb.systemplus;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 public final class SettingsActivity extends AppCompatActivity {
 
@@ -25,6 +28,16 @@ public final class SettingsActivity extends AppCompatActivity {
     public static final class SettingsFragment extends PreferenceFragmentCompat {
 
         @Override
+        public void onViewCreated(View view, Bundle savedInstanceState) {
+            super.onViewCreated(view, savedInstanceState);
+            view.setBackgroundColor(Color.WHITE);
+            RecyclerView listView = getListView();
+            if (listView != null) {
+                listView.setBackgroundColor(Color.WHITE);
+            }
+        }
+
+        @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             getPreferenceManager().setSharedPreferencesName("conf");
             setPreferencesFromResource(R.xml.prefs, rootKey);
@@ -34,7 +47,6 @@ public final class SettingsActivity extends AppCompatActivity {
         private void bindEntryNavigation() {
             bindGoToActivity("Unlock", UnlockActivity.class);
             bindGoToActivity("ActiveSelf", ActiveSelfActivity.class);
-            bindGoToActivity("ActiveModule", ActiveModuleActivity.class);
             bindGoToActivity("Notice", NoticeActivity.class);
             bindGoToActivity("Update", UpdateActivity.class);
             bindAppList("disableSwipeApps");

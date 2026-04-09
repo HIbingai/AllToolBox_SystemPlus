@@ -1,14 +1,8 @@
-# Gradle
-.gradle
-/build
-*/build
-/local.properties
-/.idea
+.gradle/
+local.properties
+build/
+app/build/
 *.iml
-*.apk
-*.keystore
-*.jks
-*.log
-卡BL/
-
-gradle/wrapper/*.zip
+.jdks/
+.jdk17.zip
+gradle/wrapper/gradle-8.11.1-bin.zip

@@ -3,8 +3,8 @@
     <!-- Default = compact profile, suitable for 320DPI + 480x540 (240x270dp). -->
     <dimen name="screen_padding">10dp</dimen>
     <dimen name="panel_gap">8dp</dimen>
-    <dimen name="panel_inner_padding">10dp</dimen>
-    <dimen name="panel_corner_radius">10dp</dimen>
+    <dimen name="panel_inner_padding">14dp</dimen>
+    <dimen name="panel_corner_radius">14dp</dimen>
 
     <dimen name="input_corner_radius">8dp</dimen>
     <dimen name="input_padding_h">8dp</dimen>
@@ -26,10 +26,10 @@
     <dimen name="space_xl">10dp</dimen>
     <dimen name="space_xxl">12dp</dimen>
 
-    <dimen name="cyber_button_text_size">11sp</dimen>
-    <dimen name="cyber_button_min_height">34dp</dimen>
+    <dimen name="cyber_button_text_size">14sp</dimen>
+    <dimen name="cyber_button_min_height">44dp</dimen>
     <dimen name="cyber_button_padding_h">10dp</dimen>
-    <dimen name="cyber_button_padding_v">7dp</dimen>
+    <dimen name="cyber_button_padding_v">8dp</dimen>
     <dimen name="cyber_button_shadow_radius">1.6dp</dimen>
-    <dimen name="cyber_button_corner_radius">10dp</dimen>
+    <dimen name="cyber_button_corner_radius">14dp</dimen>
 </resources>
