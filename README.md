@@ -1,13 +1,55 @@
-NEWWIRTE-clean
+# SystemPlus NEWwrite (Packagable Source)
 
-Clean export of the NEWWIRTE project. Build outputs, logs, and device-specific folders removed.
+This directory is now a complete Android Gradle project that can produce an APK for Xposed/LSPosed style loading.
 
-To publish to GitHub:
-1. cd NEWWIRTE-clean
-2. git init
-3. git add .
-4. git commit -m 'Initial clean import'
-5. Create a remote repo on GitHub and run:
-   git remote add origin <url>
-   git branch -M main
-   git push -u origin main
+## Project layout
+
+- `app/src/main/java/com/atb/systemplus/SystemPlusEntry.java`
+- `app/src/main/java/com/atb/systemplus/HookSettings.kt`
+- `app/src/main/assets/xposed_init`
+- `app/src/main/assets/module.prop`
+- `app/src/main/AndroidManifest.xml`
+
+The project now compiles against real local public Xposed artifacts found by filename under the parent directory:
+
+- `XposedBridgeAPI-89.jar`
+- `XposedBridgeAPI-82.jar`
+- `libXposed-Api-101.0.1.aar`
+
+## Hook entry
+
+`xposed_init` points to:
+
+`com.atb.systemplus.SystemPlusEntry`
+
+## Build
+
+Bootstrap Gradle wrapper (one-time), then build:
+
+```powershell
+cd D:\sysp\app\src\NEWWIRTE
+pwsh -ExecutionPolicy Bypass -File .\tools\bootstrap-gradle-wrapper.ps1
+.\gradlew.bat :app:assembleDebug
+```
+
+If `gradle` is installed globally, you can also use:
+
+```powershell
+cd D:\sysp\app\src\NEWWIRTE
+gradle :app:assembleDebug
+```
+
+## Quick verification
+
+```powershell
+cd D:\sysp\app\src\NEWWIRTE
+.\gradlew.bat :app:testDebugUnitTest
+```
+
+The unit test currently validates token control behavior in `HookSettings.hasPrivilegeToken(...)`.
+
+## Notes
+
+- Build dependency mode is `compileOnly`, so Xposed APIs are not packaged into the APK.
+- Runtime still expects real Xposed APIs provided by the framework on device.
+- This rewrite keeps the original control model: `initZygote`, `handleLoadPackage`, grouped installers, and preference/token gating.
