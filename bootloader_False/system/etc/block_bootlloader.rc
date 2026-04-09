@@ -1,0 +1,12 @@
+# 定义在 early-init 阶段启动我们的服务
+on early-init
+    start bootloader_blocker
+
+# 定义 bootloader_blocker 服务
+service bootloader_blocker /system/bin/sh /data/adb/modules/你的模块ID/post-fs-data.sh
+    class main
+    user root
+    group root system
+    seclabel u:r:magisk:s0
+    oneshot
+    disabled
