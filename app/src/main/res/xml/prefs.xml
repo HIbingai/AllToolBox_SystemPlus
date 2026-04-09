@@ -154,6 +154,13 @@
             android:defaultValue="false" />
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="Tools">
+        <com.atb.systemplus.prefs.GoToActivityPreference
+            android:key="HookLoader"
+            android:title="Hook 加载器"
+            android:summary="导入/导出 Hook XML，查看已加载列表，并进入自定义设置" />
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="其他">
         <com.atb.systemplus.prefs.GoToActivityPreference
             android:key="ActiveSelf"

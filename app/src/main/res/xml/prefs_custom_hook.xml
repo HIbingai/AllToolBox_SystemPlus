@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/custom_settings_category_title">
+
+        <SwitchPreferenceCompat
+            android:key="auto_enable_imported_hook"
+            android:title="@string/custom_settings_auto_enable_title"
+            android:summary="@string/custom_settings_auto_enable_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="overwrite_when_name_exists"
+            android:title="@string/custom_settings_overwrite_title"
+            android:summary="@string/custom_settings_overwrite_summary"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
