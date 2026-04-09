@@ -1,6 +1,0 @@
-id=SystemPlus
-name=ATB SystemPlus 
-version=v1.1
-versionCode=10100
-author=Aha
-description=AllToolBox版本的SystemPlus，额外功能，阻止系统重启到bootloader
