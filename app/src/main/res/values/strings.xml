@@ -1,40 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">系统增强</string>
+    <string name="app_name">SystemPlus</string>
     <string name="settings">设置</string>
     <string name="xposed_description">SystemPlus 重写版 Hook 模块</string>
-    <string name="home_title">SystemPlus</string>
-    <string name="home_subtitle">SystemPlus 模块中心</string>
-    <string name="home_notice_title">查看公告</string>
-    <string name="home_notice_summary">支持查看此模块公告和 SkyWear 公告</string>
-    <string name="home_update_title">检查更新</string>
-    <string name="home_update_summary">瞅一眼模块有无更新</string>
-    <string name="notice_page_title">公告</string>
-    <string name="notice_compat_content">- 当前公告页已切换为稳定兼容模式。
-- 如需完整公告流，可后续接入稳定数据源。</string>
-    <string name="notice_compat_footer">兼容模式页面</string>
+    <string name="settings_header_title">SystemPlus</string>
+    <string name="settings_header_subtitle">AllToolBox改版</string>
 
-    <string name="ui_title">SystemPlus 启用状态详情</string>
-    <string name="ui_subtitle">原版 huanli 风格状态页：框架与模块启用/禁用检测</string>
-    <string name="status_framework_label">框架状态</string>
-    <string name="status_module_label">模块状态</string>
+    <string name="notice_simple_title">公告</string>
+    <string name="notice_simple_content">- 当前公告页已切换为稳定兼容模式。
+- 如需完整公告流，可后续接入稳定数据源。</string>
+    <string name="notice_simple_footer">兼容模式页面</string>
+
+    <string name="ui_title">模块状态</string>
+    <string name="ui_subtitle">本页用于查看模块激活状态和模块加载状态。</string>
+    <string name="status_framework_label">模块激活状态页面</string>
+    <string name="status_module_label">模块加载状态页面</string>
     <string name="status_framework_detail_label">框架状态详情</string>
     <string name="status_module_detail_label">模块状态详情</string>
     <string name="status_runtime_hint_label">运行提示</string>
     <string name="status_unknown">未知</string>
     <string name="status_enabled">已启用</string>
     <string name="status_disabled">未启用</string>
+    <string name="status_framework_enabled">已激活</string>
+    <string name="status_framework_disabled">未激活</string>
+    <string name="status_module_enabled">已加载</string>
+    <string name="status_module_disabled">未加载</string>
+    <string name="status_prefix">当前状态：%1$s</string>
     <string name="status_enabled_api">已启用（API %1$d）</string>
-    <string name="status_framework_detail_enabled_api">检测到 XposedBridge，API 版本：%1$d。</string>
-    <string name="status_framework_detail_enabled_generic">检测到 XposedBridge 类，但无法读取 API 版本。</string>
-    <string name="status_framework_detail_disabled">当前进程未检测到框架类。请确认 EdXposed/LSPosed 已生效并重启系统。</string>
-    <string name="status_module_detail_enabled">模块 Hook 已注入到当前应用进程。</string>
-    <string name="status_module_detail_disabled">未检测到模块 Hook。请检查模块启用状态、作用域并重启。</string>
+    <string name="status_framework_detail_enabled_api">用于显示当前模块激活状态（Xposed环境/模块钩子/激活码综合判定）。</string>
+    <string name="status_framework_detail_enabled_generic">用于显示当前模块激活状态（Xposed环境/模块钩子/激活码综合判定）。</string>
+    <string name="status_framework_detail_disabled">用于显示当前模块激活状态（Xposed环境/模块钩子/激活码综合判定）。</string>
+    <string name="status_module_detail_enabled">检测到 Xposed 框架已加载，当前进程可能未被注入作用域（通常不影响模块在目标应用生效）。</string>
+    <string name="status_module_detail_disabled">用于显示当前模块加载状态（请确认框架环境正常）。</string>
     <string name="runtime_hint_framework_off">当前进程未检测到框架。请检查框架安装状态并重启系统。</string>
     <string name="runtime_hint_module_off">已检测到框架，但模块 Hook 对本应用未生效。请检查作用域并重启。</string>
     <string name="runtime_hint_all_ok">框架与模块 Hook 均已生效。</string>
+    <string name="device_code">设备码：%1$s</string>
 
-    <string name="action_refresh_status">刷新检测</string>
+    <string name="action_refresh_status">刷新状态</string>
     <string name="action_save">应用配置</string>
     <string name="action_reset_defaults">恢复默认</string>
     <string name="action_copy_diagnostics">复制诊断信息</string>
@@ -65,10 +68,19 @@
 
     <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="check_update">检查更新</string>
+    <string name="update_title">检查更新</string>
+    <string name="update_no_available">暂未发现可用更新（兼容模式页面）</string>
     <string name="found_new_version">发现新版本，是否更新？</string>
     <string name="update">更新</string>
     <string name="cancel">取消</string>
-    <string name="current_version">当前版本：%1$s(%2$s)</string>
+    <string name="current_version">当前版本：%1$d</string>
     <string name="downloaded_progress">已下载进度：%1$s</string>
     <string name="progress_not_download">已下载进度：还未下载</string>
+
+    <string name="active_self_title">自激活</string>
+    <string name="active_self_desc">兼容模式：请按顺序尝试下方按钮。
+若提示处理中，请稍候片刻。</string>
+    <string name="active_plan_one">方案一</string>
+    <string name="active_plan_two">方案二</string>
+    <string name="active_plan_three">方案三</string>
 </resources>

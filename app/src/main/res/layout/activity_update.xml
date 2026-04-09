@@ -2,101 +2,51 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6E6EA"
-    android:padding="14dp">
+    android:background="@color/app_bg"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="18dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update_title"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_simple_card"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_panel_light"
             android:orientation="vertical"
-            android:padding="14dp">
+            android:padding="0dp">
 
             <TextView
                 android:id="@+id/version_view"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#FF2F3A4A"
+                android:textColor="@color/text_primary"
                 android:textSize="16sp" />
-
-            <Button
-                android:id="@+id/check_update_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/check_update" />
-
-            <ProgressBar
-                android:id="@+id/requesting_indicator"
-                style="@android:style/Widget.ProgressBar.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:indeterminate="true"
-                android:visibility="gone" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/confirm_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/bg_simple_card"
-            android:orientation="vertical"
-            android:padding="14dp"
-            android:visibility="gone">
 
             <TextView
+                android:id="@+id/update_message"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/found_new_version"
-                android:textColor="#FF2F3A4A"
-                android:textSize="16sp" />
+                android:layout_marginTop="16dp"
+                android:text="@string/update_no_available"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/update_button"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/update" />
-
-                <Button
-                    android:id="@+id/cancel_button"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_weight="1"
-                    android:text="@string/cancel" />
-            </LinearLayout>
         </LinearLayout>
-
-        <ProgressBar
-            android:id="@+id/progress_bar"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:max="100"
-            android:progress="0" />
-
-        <TextView
-            android:id="@+id/download_progress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="#FF4E5968"
-            android:textSize="14sp" />
 
     </LinearLayout>
 

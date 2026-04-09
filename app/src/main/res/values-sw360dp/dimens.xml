@@ -3,8 +3,8 @@
     <!-- Larger profile for mainstream phones/tablets. -->
     <dimen name="screen_padding">18dp</dimen>
     <dimen name="panel_gap">14dp</dimen>
-    <dimen name="panel_inner_padding">14dp</dimen>
-    <dimen name="panel_corner_radius">14dp</dimen>
+    <dimen name="panel_inner_padding">16dp</dimen>
+    <dimen name="panel_corner_radius">16dp</dimen>
 
     <dimen name="input_corner_radius">10dp</dimen>
     <dimen name="input_padding_h">12dp</dimen>
@@ -31,5 +31,5 @@
     <dimen name="cyber_button_padding_h">14dp</dimen>
     <dimen name="cyber_button_padding_v">11dp</dimen>
     <dimen name="cyber_button_shadow_radius">2.5dp</dimen>
-    <dimen name="cyber_button_corner_radius">12dp</dimen>
+    <dimen name="cyber_button_corner_radius">16dp</dimen>
 </resources>

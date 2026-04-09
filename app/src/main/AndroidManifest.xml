@@ -27,9 +27,6 @@
             android:name=".ActiveSelfActivity"
             android:exported="false" />
         <activity
-            android:name=".ActiveModuleActivity"
-            android:exported="false" />
-        <activity
             android:name=".NoticeActivity"
             android:exported="false" />
         <activity
