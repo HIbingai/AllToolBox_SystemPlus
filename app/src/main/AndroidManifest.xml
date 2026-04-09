@@ -24,6 +24,12 @@
             android:name=".AppListActivity"
             android:exported="false" />
         <activity
+            android:name=".LoaderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomSettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ActiveSelfActivity"
             android:exported="false" />
         <activity

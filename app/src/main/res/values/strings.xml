@@ -83,4 +83,37 @@
     <string name="active_plan_one">方案一</string>
     <string name="active_plan_two">方案二</string>
     <string name="active_plan_three">方案三</string>
+
+    <string name="loader_title">自定义 Hook 加载器</string>
+    <string name="loader_subtitle">导入两个 XML（界面 XML + hook XML），管理已加载 Hook，并支持导出。</string>
+    <string name="loader_import">导入</string>
+    <string name="loader_export">导出</string>
+    <string name="loader_delete">删除</string>
+    <string name="loader_custom_settings">自定义设置</string>
+    <string name="loader_empty">暂无已加载 Hook</string>
+    <string name="loader_hook_enabled">启用</string>
+    <string name="loader_hook_meta">创建时间：%1$s   ID：%2$s</string>
+    <string name="loader_toast_pick_hook_xml">已选择界面 XML，请继续选择 hook XML</string>
+    <string name="loader_toast_import_success">导入成功：%1$s</string>
+    <string name="loader_toast_export_success">导出完成</string>
+    <string name="loader_toast_export_ui_done">界面 XML 已导出，请继续选择 hook XML 的保存位置</string>
+    <string name="loader_error_empty_xml">XML 内容为空</string>
+    <string name="loader_error_read_xml">读取或校验 XML 失败：%1$s</string>
+    <string name="loader_error_import_state">导入状态异常，请重新导入</string>
+    <string name="loader_error_no_export_target">未找到要导出的 Hook</string>
+    <string name="loader_error_empty_list">暂无可导出的 Hook</string>
+    <string name="loader_export_choose_hook">选择要导出的 Hook</string>
+    <string name="loader_export_mode_title">选择导出格式</string>
+    <string name="loader_export_mode_zip">单个 ZIP（包含两个 XML）</string>
+    <string name="loader_export_mode_dual_xml">两个独立 XML</string>
+    <string name="loader_delete_title">删除 Hook</string>
+    <string name="loader_delete_message">确认删除 “%1$s” 吗？</string>
+    <string name="loader_delete_confirm">删除</string>
+    <string name="loader_delete_cancel">取消</string>
+
+    <string name="custom_settings_category_title">Hook Loader 设置</string>
+    <string name="custom_settings_auto_enable_title">导入后自动启用</string>
+    <string name="custom_settings_auto_enable_summary">导入完成后默认开启该 Hook</string>
+    <string name="custom_settings_overwrite_title">同名覆盖</string>
+    <string name="custom_settings_overwrite_summary">导入时若名称重复，覆盖旧 Hook（关闭则自动追加序号）</string>
 </resources>

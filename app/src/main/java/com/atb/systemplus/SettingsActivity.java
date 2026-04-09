@@ -49,6 +49,7 @@ public final class SettingsActivity extends AppCompatActivity {
             bindGoToActivity("ActiveSelf", ActiveSelfActivity.class);
             bindGoToActivity("Notice", NoticeActivity.class);
             bindGoToActivity("Update", UpdateActivity.class);
+            bindGoToActivity("HookLoader", LoaderActivity.class);
             bindAppList("disableSwipeApps");
             bindAppList("DontKillApps");
         }

@@ -16,6 +16,24 @@ if (localXposedApis.isEmpty()) {
     throw new RuntimeException("No local Xposed API artifacts found under: ${rootProject.projectDir.parentFile}")
 }
 
+// Auto-increment `versionCode` on each Gradle invocation.
+// Stores the current numeric code in `app/version.properties` (not checked in by default).
+def versionPropsFile = file('version.properties')
+def Properties versionProps = new Properties()
+def currentVersionCode = 0
+if (versionPropsFile.exists()) {
+    try {
+        versionProps.load(new FileInputStream(versionPropsFile))
+        currentVersionCode = Integer.parseInt(versionProps.getProperty('VERSION_CODE') ?: '0')
+    } catch (Exception e) {
+        currentVersionCode = 0
+    }
+}
+def newVersionCode = currentVersionCode + 1
+versionProps.setProperty('VERSION_CODE', newVersionCode.toString())
+versionPropsFile.withOutputStream { os -> versionProps.store(os, null) }
+println "[version] bump VERSION_CODE: ${currentVersionCode} -> ${newVersionCode} (stored in ${versionPropsFile})"
+
 android {
     namespace 'com.atb.systemplus'
     compileSdk 33
@@ -24,7 +42,7 @@ android {
         applicationId "com.atb.systemplus"
         minSdk 21
         targetSdk 33
-        versionCode 1
+        versionCode newVersionCode
         versionName "1.0.0"
     }
 
@@ -48,11 +66,15 @@ android {
 }
 
 dependencies {
+    def room_version = '2.5.2'
+
     compileOnly localXposedApis
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.preference:preference:1.2.0'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation "androidx.room:room-runtime:${room_version}"
+    annotationProcessor "androidx.room:room-compiler:${room_version}"
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
